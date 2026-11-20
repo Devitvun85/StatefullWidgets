@@ -28,13 +28,9 @@ class FavoriteCard extends StatefulWidget {
 }
 
 class _FavoriteCardState extends State<FavoriteCard> {
-  late bool isFavorite;
+    late bool isFavorite = widget.isfavorite;
 
-  @override
-  void initState() {
-    super.initState();
-    isFavorite = widget.isfavorite;
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +59,8 @@ class _FavoriteCardState extends State<FavoriteCard> {
                 isFavorite = !isFavorite;
               });
             },
-            icon:Icon(isFavorite? Icons.favorite:Icons.favorite_border,color: isFavorite?Colors.red:Colors.grey,)
+            icon:Icon(isFavorite? Icons.favorite:Icons.favorite_border,
+                 color: isFavorite?Colors.red:Colors.grey,)
 
           ),
         ],

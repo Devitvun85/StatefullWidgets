@@ -23,6 +23,7 @@ class ImageGallery extends StatefulWidget {
 }
 
 class _ImageGalleryState extends State<ImageGallery> {
+  //remember the index of the photo currently displayed
   int currentIndex = 0;
 
   void previousImage() {
